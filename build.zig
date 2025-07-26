@@ -77,8 +77,6 @@ pub fn build(b: *std.Build) !void {
     ktx_zig_module_step.addIncludePath(b.path("external/dfdutils"));
 
     if (ktx_feature_vk_upload) {
-        ktx_lib.root_module.linkSystemLibrary("vulkan", .{});
-
         const vulkan_headers_dep = b.dependency("vulkan_headers", .{});
         ktx_zig_module_step.addIncludePath(vulkan_headers_dep.path("include"));
     }
