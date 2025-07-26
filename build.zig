@@ -123,6 +123,9 @@ fn configureKtx(b: *std.Build, lib: *std.Build.Step.Compile, version_header: *st
     lib.root_module.addCMacro("BASISD_SUPPORT_KTX2", "1");
     lib.root_module.addCMacro("BASISD_SUPPORT_KTX2_ZSTD", "0");
     lib.root_module.addCMacro("BASISD_SUPPORT_FXT1", "0");
+    // Legacy GL defs.
+    lib.root_module.addCMacro("GL_SRG8_EXT", "0x8C43");
+    lib.root_module.addCMacro("GL_ALPHA8_EXT", "0x803C");
 
     if (options.etc_unpack) {
         lib.root_module.addCMacro("SUPPORT_SOFTWARE_ETC_UNPACK", "1");
