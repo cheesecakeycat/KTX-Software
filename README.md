@@ -11,7 +11,7 @@ Feel free to create pull requests if the library does not compile for the latest
 
 ```sh
 
-zig fetch --save git+https://github.com/rplstr/KTX-Software.git
+zig fetch --save git+https://github.com/cheesecakeycat/KTX-Software.git
 
 ```
 2. In your `build.zig`, add the dependency and link it to your artifact:
@@ -25,7 +25,7 @@ const exe = b.addExecutable(...);
 const ktx_dep = b.dependency("ktx_software", .{
     .target = target,
     .optimize = optimize,
-    // you can override the options here. See [build.zig](https://github.com/rplstr/KTX-Software/blob/main/build.zig/#L8-L14) for more details.
+    // you can override the options here. See [build.zig](https://github.com/cheesecakeycat/KTX-Software/blob/main/build.zig/#L8-L14) for more details.
     // .ktx2 = true,
 });
 
