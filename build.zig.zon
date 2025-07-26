@@ -1,0 +1,23 @@
+.{
+    .name = .ktx_software,
+    .version = "4.0.0",
+    .fingerprint = 0x3669d375295cbfdb,
+    .paths = .{
+        "external",
+        "include",
+        "lib",
+        "utils",
+        "other_include",
+        ".gitignore",
+        "build.zig",
+        "build.zig.zon",
+        "LICENSE.md",
+        "README.md",
+    },
+    .dependencies = .{
+        .vulkan_headers = .{
+            .url = "git+https://github.com/KhronosGroup/Vulkan-Headers#89268a6d17fc87003b209a1422c17ab288be99a0",
+            .hash = "N-V-__8AAKDR9QE0UDIcMBqpmUjBm5ayQHNNVb8JuOCy4GOo",
+        },
+    },
+}
