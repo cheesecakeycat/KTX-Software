@@ -61,11 +61,11 @@ pub fn build(b: *std.Build) !void {
 
     // Module.
     const main_header = if (ktx_feature_vk_upload) blk: {
-        const wrapper = b.addWriteFile("loadvulkan.h",
+        const wrapper = b.addWriteFile("ktx.h",
             \\#include "vulkan/vulkan.h"
             \\#include "ktxvulkan.h"
         );
-        break :blk wrapper.getDirectory().path(b, "loadvulkan.h");
+        break :blk wrapper.getDirectory().path(b, "ktx.h");
     } else b.path("include/ktx.h");
 
     const ktx_zig_module_step = b.addTranslateC(.{
